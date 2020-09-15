@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2aba20562ecfe58bd3f7f25484ffeaac",
+    "content-hash": "4ab9c0072b2b16f9ab6a47f7a81d9d71",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1345,6 +1345,39 @@
                 }
             ],
             "time": "2020-08-09T10:34:01+00:00"
+        },
+        {
+            "name": "midnite81/xml2array",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/midnite81/xml2array.git",
+                "reference": "d55e3857badc50d8a995fdcb06eb2eab43d65539"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/midnite81/xml2array/zipball/d55e3857badc50d8a995fdcb06eb2eab43d65539",
+                "reference": "d55e3857badc50d8a995fdcb06eb2eab43d65539",
+                "shasum": ""
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "Midnite81\\Xml2Array\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Unlicense"
+            ],
+            "authors": [
+                {
+                    "name": "Simon Rogers",
+                    "email": "webdev@centralblue.co.uk"
+                }
+            ],
+            "description": "A package to convert XML to an Array with the inbuilt ability to convert to Json, Laravel Collection and Serialize",
+            "time": "2018-07-09T18:27:57+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -5635,16 +5668,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "9.1.8",
+            "version": "9.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "f98f8466126d83b55b924a94d2244c53c216b8fb"
+                "reference": "cf6582906d4b2502c5f4c6be6a3d0b4cd5b3ef7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/f98f8466126d83b55b924a94d2244c53c216b8fb",
-                "reference": "f98f8466126d83b55b924a94d2244c53c216b8fb",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/cf6582906d4b2502c5f4c6be6a3d0b4cd5b3ef7f",
+                "reference": "cf6582906d4b2502c5f4c6be6a3d0b4cd5b3ef7f",
                 "shasum": ""
             },
             "require": {
@@ -5652,7 +5685,7 @@
                 "ext-libxml": "*",
                 "ext-xmlwriter": "*",
                 "nikic/php-parser": "^4.8",
-                "php": "^7.3 || ^8.0",
+                "php": ">=7.3",
                 "phpunit/php-file-iterator": "^3.0.3",
                 "phpunit/php-text-template": "^2.0.2",
                 "sebastian/code-unit-reverse-lookup": "^2.0.2",
@@ -5704,7 +5737,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-09-07T08:07:10+00:00"
+            "time": "2020-09-15T06:14:11+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -7107,7 +7140,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.3"
+        "php": "^7.4"
     },
     "platform-dev": [],
     "plugin-api-version": "1.1.0"

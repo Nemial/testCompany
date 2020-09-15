@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Files;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get(
+    '/',
+    function () {
+        return view('main');
+    }
+);
+
+Route::get('/files', [Files::class, 'index']);
