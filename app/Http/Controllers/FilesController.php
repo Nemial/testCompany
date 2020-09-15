@@ -93,6 +93,6 @@ class FilesController extends Controller
             rmdir($zipDir);
             rmdir($tempDir);
         $count = DB::table('files')->count();
-        return view('finish', compact('count'));
+        return view('files', compact('count'));
     }
 }
