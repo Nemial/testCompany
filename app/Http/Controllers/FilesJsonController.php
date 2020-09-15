@@ -54,5 +54,6 @@ class FilesJsonController extends Controller
     public function destroy($id)
     {
         DB::table('files')->delete($id);
+        return response('Deleted');
     }
 }

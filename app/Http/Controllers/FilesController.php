@@ -7,11 +7,10 @@ use Illuminate\Support\Facades\DB;
 use Midnite81\Xml2Array\Xml2Array;
 use ZipArchive;
 
-class Files extends Controller
+class FilesController extends Controller
 {
     public function index(Request $request)
     {
-        if (DB::table('files')->count() === 0) {
             $url = $request->input('webSite');
             $parsed = parse_url($url);
             $conn_id = ftp_connect($parsed['host']);
@@ -60,7 +59,7 @@ class Files extends Controller
                 $zip->close();
             }
 
-            #Add Files to files table
+            #Add FilesController to files table
             $fileList = array_filter(
                 scandir($unZipDir),
                 function ($file) {
@@ -93,7 +92,6 @@ class Files extends Controller
             }
             rmdir($zipDir);
             rmdir($tempDir);
-        }
         $count = DB::table('files')->count();
         return view('finish', compact('count'));
     }

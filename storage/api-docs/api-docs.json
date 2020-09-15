@@ -1,0 +1,50 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "FilesJSON API",
+        "version": "1.0"
+    },
+    "paths": {
+        "/files/{id}/export": {
+            "get": {
+                "summary": "Export JSON File",
+                "responses": {
+                    "200": {
+                        "description": "jsonData"
+                    }
+                }
+            }
+        },
+        "/files": {
+            "post": {
+                "summary": "Create New JSON File",
+                "responses": {
+                    "200": {
+                        "description": "ID"
+                    }
+                }
+            }
+        },
+        "/files/{id}": {
+            "put": {
+                "summary": "Update JSON File",
+                "responses": {
+                    "200": {
+                        "description": "Updated"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete JSON File",
+                "responses": {
+                    "200": {
+                        "description": "Deleted"
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}

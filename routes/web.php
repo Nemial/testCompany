@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Files;
+use App\Http\Controllers\FilesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,4 +21,4 @@ Route::get(
     }
 );
 
-Route::get('/files', [Files::class, 'index']);
+Route::get('/finish', [FilesController::class, 'index']);
