@@ -13,7 +13,9 @@ class FilesJsonController extends Controller
         $file = DB::table('files')->find($id);
 
         if ($file) {
-            return $file->jsonData;
+            return response(
+                "ID: $file->id\njsonData: $file->jsonData\ncreated_at: $file->created_at\nupdated_at: $file->updated_at\n"
+            );
         }
         return response('Not Found', 404);
     }
@@ -27,7 +29,10 @@ class FilesJsonController extends Controller
     public function store(Request $request)
     {
         $jsonData = $request->input('jsonData');
-        $id = DB::table('files')->insertGetId(['jsonData' => $jsonData]);
+        $timestamp = Carbon::now()->toDateTimeString();
+        $id = DB::table('files')->insertGetId(
+            ['jsonData' => $jsonData, 'created_at' => $timestamp, 'updated_at' => $timestamp]
+        );
 
         return response($id);
     }
