@@ -13,9 +13,7 @@ class FilesJsonController extends Controller
         $file = DB::table('files')->find($id);
 
         if ($file) {
-            return response(
-                "ID: $file->id\njsonData: $file->jsonData\ncreated_at: $file->created_at\nupdated_at: $file->updated_at\n"
-            );
+            return response($file->jsonData);
         }
         return response('Not Found', 404);
     }
