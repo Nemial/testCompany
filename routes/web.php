@@ -21,4 +21,4 @@ Route::get(
     }
 );
 
-Route::get('/files', [FilesController::class, 'index']);
+Route::get('/files', [FilesController::class, 'filling']);

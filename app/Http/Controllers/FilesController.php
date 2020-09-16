@@ -10,7 +10,7 @@ use ZipArchive;
 
 class FilesController extends Controller
 {
-    public function index(Request $request)
+    public function filling(Request $request)
     {
         $url = $request->input('webSite');
         $parsed = parse_url($url);
