@@ -31,6 +31,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
  * )
  */
 Route::get('files/{id}/export', [FilesJsonController::class, 'export']);
+Route::resource('files', FilesJsonController::class);
 /**
  * @OA\Post (
  *      path="/files",
@@ -38,7 +39,6 @@ Route::get('files/{id}/export', [FilesJsonController::class, 'export']);
  *     @OA\Response(response="200", description="ID")
  * )
  */
-Route::post('files', [FilesJsonController::class, 'store']);
 /**
  * @OA\Put (
  *      path="/files/{id}",
@@ -46,7 +46,6 @@ Route::post('files', [FilesJsonController::class, 'store']);
  *      @OA\Response(response="200", description="Updated")
  * )
  */
-Route::put('files/{id}', [FilesJsonController::class, 'update']);
 /**
  * @OA\Delete (
  *      path="/files/{id}",
@@ -54,4 +53,3 @@ Route::put('files/{id}', [FilesJsonController::class, 'update']);
  *     @OA\Response(response="200", description="Deleted")
  * )
  */
-Route::delete('files/{id}', [FilesJsonController::class, 'destroy']);
