@@ -31,7 +31,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
  * )
  */
 Route::get('files/{id}/export', [FilesJsonController::class, 'export']);
-Route::resource('files', FilesJsonController::class);
+Route::resource('files', FilesJsonController::class)->only(['store', 'update', 'destroy']);
 /**
  * @OA\Post (
  *      path="/files",
